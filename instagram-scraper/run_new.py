@@ -20,14 +20,14 @@ async def run():
     instagram.BASE_CONFIG["cache"] = True
     instagram.BASE_CONFIG["debug"] = True
     print("running Instagram scrape and saving results to ./results directory")
-  #  user = await instagram.scrape_user("picodobone.oficial")
+  #  user = await instagram.scrape_user("cxffeeblack")
   #  output.joinpath("user.json").write_text(json.dumps(user, indent=2, ensure_ascii=False), encoding='utf-8') 
     # scrape_user_posts requires the profile username
     posts_all = []
-    async for post in instagram.scrape_user_posts("picodobone.oficial",max_pages=34):
+    async for post in instagram.scrape_user_posts("cxffeeblack",max_pages=34):
         posts_all.append(post)
     log.success("scraped {} posts", len(posts_all))
-    output.joinpath("all-user-posts-picodobone.json").write_text(json.dumps(posts_all, indent=2, ensure_ascii=False), encoding='utf-8')
+    output.joinpath("all-user-posts-cxffeeblack.json").write_text(json.dumps(posts_all, indent=2, ensure_ascii=False), encoding='utf-8')
 
 
 if __name__ == "__main__":
