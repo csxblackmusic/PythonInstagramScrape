@@ -1,0 +1,75 @@
+<html>
+<head><title>sample layout</title>
+<style>
+
+	#container
+	{
+		width:80%;
+		margin:auto;
+	}
+	header,aside,main,footer
+	{
+		border: 1px solid black;
+		box-sizing:border-box;
+	}
+	header
+	{
+		width:100%;
+	}
+	aside
+	{
+		width:25%;
+		float:left;
+		clear:left;
+		min-height:33.3%;
+	}
+	main
+	{
+		clear:right;
+		float:right;
+		width:75%;
+	}
+	footer
+	{
+		width:100%;
+		clear:both;
+	}
+	
+	#content1,#content2,#content3
+	{
+		width: 33%; /*since the divs are floated left it makes 3columns */
+		float:left;
+		overflow:scroll;
+		min-height:100%;
+	}
+	#midcontain
+	{
+		width:100%;
+		clear:both;
+	}
+	
+</style>
+</head>
+<body>
+	<div id="container">
+		<header> header content</header>
+		<div id="midcontain">
+			<aside>aside</aside>
+			<main>
+				<div id="content1">
+					content1
+				</div>
+				<div id="content2">
+					content2
+				</div>
+				<div id="content3">
+					content 3
+				</div>
+			</main>
+			<aside>aside</aside>
+			<aside>aside</aside>
+		</div>
+		<footer> footer info </footer>
+	</div>
+</body>
+</html>
